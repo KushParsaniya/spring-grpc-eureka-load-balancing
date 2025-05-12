@@ -1,0 +1,18 @@
+syntax = 'proto3';
+
+option java_multiple_files = true;
+option java_package = "dev.kush.order_service.product";
+
+message ProductRequest {
+  int64 id = 1;
+  string userId = 2;
+}
+
+message ProductResponse {
+  int32 quantity = 1;
+  double price = 2;
+}
+
+service ProductService {
+  rpc GetProduct(ProductRequest) returns (ProductResponse) {}
+}
