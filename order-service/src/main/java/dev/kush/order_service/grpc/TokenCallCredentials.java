@@ -18,6 +18,9 @@ public class TokenCallCredentials extends CallCredentials {
         this.jwtToken = jwtToken;
     }
 
+    public TokenCallCredentials() {
+        this.jwtToken = UserUtils.getJwtToken();
+    }
 
     @Override
     public void applyRequestMetadata(RequestInfo requestInfo, Executor appExecutor, MetadataApplier applier) {

@@ -20,7 +20,7 @@ public class OrderService {
         ProductResponse product;
         try {
             product = productGrpcClient.getStub()
-                    .withCallCredentials(new TokenCallCredentials(UserUtils.getJwtToken()))
+                    .withCallCredentials(new TokenCallCredentials())
                     .getProduct(ProductRequest.newBuilder()
                             .setId(orderCreateRequest.productId())
                             .setUserId(userId)
