@@ -6,7 +6,7 @@ This repository demonstrates a microservices architecture built with Spring gRPC
 - Spring Boot
 - Spring gRPC Starter
 - Eureka Server & Eureka Client (for service discovery and load balancing)
-- Keycloak (as a resource server for authentication)
+- Keycloak (as a auth server for authentication)
 - Gradle (build and dependency management)
 - gRPC (communication protocol)
 
